@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap</title>
+</head>
+<body>
+    <h1>Swap Varibles</h1>
+    <p id="swap"></p>
+    <script>
+        var x=10;
+        var y=5;
+        document.getElementById("swap").innerHTML="Before Swap: x = " + x + ", "+ " y = " + y ;
+        [x,y]=[y,x];
+        document.getElementById("swap").innerHTML="After Swap  : X = " + x + ", "+ " Y = " + y  ;
+
+    </script>
+</body>
+</html>
