@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>person</title>
+</head>
+<body>
+    <h1>Personal Details</h1>
+    <p id="person"></p>
+    <script>
+        var person={
+            name:"Nitty Tito",
+            age:23,
+            message: function(){
+                return "Hi, I'am " + this.name;
+            }
+        }
+        person.city="Ernakulam";
+        document.getElementById("person").innerHTML=person.message() + "<br>Age: " +person.age + "<br>Place: " + person.city;
+    </script>
+</body>
+</html>

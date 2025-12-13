@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 100px;
+      justify-content: center;
+    }
+    input, select, button {
+      padding: 8px;
+      margin: 5px;
+    }
+    #result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+   <h2>Simple Calculator</h2>
+
+  <input type="number" id="num1" placeholder="First digit">
+  <select id="operator">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+  <input type="number" id="num2" placeholder="second digit">
+  <button onclick="calculate()">=</button>
+
+  <div id="result"></div>
+
+  <script>
+    function add(a, b) { return a + b; }
+    function subtract(a, b) { return a - b; }
+    function multiply(a, b) { return a * b; }
+    function divide(a, b) { return a / b; }
+
+    function calculate() {
+      const num1 = parseFloat(document.getElementById("num1").value);
+      const num2 = parseFloat(document.getElementById("num2").value);
+      const operator = document.getElementById("operator").value;
+      let result;
+
+      switch (operator) {
+        case '+': result = add(num1, num2); break;
+        case '-': result = subtract(num1, num2); break;
+        case '*': result = multiply(num1, num2); break;
+        case '/': result = divide(num1, num2); break;
+        default: result = "Invalid operator";
+      }
+
+      printResult(result);
+    }
+
+    function printResult(value) {
+      document.getElementById("result").innerText = "Result: " + value;
+    }
+  </script>
+</body>
+</html>
