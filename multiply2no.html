@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiply</title>
+</head>
+<body>
+    <h1>Multiplies of Two numbers</h1>
+    <p id="multi"></p>
+    <script>
+        var num1=prompt("Enter a fisrt number:");
+        var num2=prompt("Enter a second number:");
+        var product=()=>{
+            return num1*num2;
+        }
+        var result=product(num1,num2);
+        document.getElementById("multi").innerHTML="The Product " + num1 + " * " + num2 + " = "+ result;
+    </script>
+</body>
+</html>
