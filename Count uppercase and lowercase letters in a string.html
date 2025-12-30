@@ -1,0 +1,14 @@
+let str = prompt("Enter a string:");
+let upper = 0;
+let lower = 0;
+
+for (let ch of str) {
+    if (ch >= 'A' && ch <= 'Z') {
+        upper++;
+    } else if (ch >= 'a' && ch <= 'z') {
+        lower++;
+    }
+}
+
+console.log("Uppercase letters:", upper);
+console.log("Lowercase letters:", lower);
