@@ -1,0 +1,12 @@
+let text = "JavaScript programming is very interesting";
+
+let words = text.split(" ");
+let longest = words[0];
+
+for (let word of words) {
+  if (word.length > longest.length) {
+    longest = word;
+  }
+}
+
+console.log("Longest word:", longest);
