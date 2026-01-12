@@ -1,0 +1,26 @@
+// Original matrix
+let matrix = [
+    [1, 2, 3],
+    [4, 5, 6]
+];
+
+// Get rows and columns
+let rows = matrix.length;
+let cols = matrix[0].length;
+
+// Transpose matrix
+let transpose = [];
+
+for (let i = 0; i < cols; i++) {
+    transpose[i] = [];
+    for (let j = 0; j < rows; j++) {
+        transpose[i][j] = matrix[j][i];
+    }
+}
+
+// Display result
+console.log("Original Matrix:");
+console.log(matrix);
+
+console.log("Transpose Matrix:");
+console.log(transpose);
