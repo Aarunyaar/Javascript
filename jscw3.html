@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CW JS day3</title>
+</head>
+<body>
+
+    <p>The position of the word service: </p>
+    <p id="position"></p><br>
+    <p>The cleaned string is : </p>
+    <p id="demo"></p>
+       <script>
+
+            var feedback= "   I loved the FOOD and the service!   ";        
+            var feedbacktrim=feedback.trim();
+            var feedbackLower=feedbacktrim.toLowerCase();
+            var feedbackreplace=feedbackLower.replace(/food/i , "ambience");
+            var feedbackposition=feedbackreplace.search("service");
+            var output = feedbackreplace.split(" ");
+            document.getElementById("position").innerHTML=feedbackposition;
+            document.getElementById("demo").innerHTML=output;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grocery Store Calculator</title>
+</head>
+<body>
+    <h2>Grocery Store Calculator</h2>
+    <script>
+        
+        let purchaseCount = 0;
+
+       
+        while (purchaseCount < 5) {
+           
+            let code = parseInt(prompt("Enter product code (1-Apple, 2-Banana, 3-Mango):"));
+            
+            let quantity = parseInt(prompt("Enter quantity:"));
+
+            let productName = "";
+            let pricePerItem = 0;
+
+           
+            switch(code) {
+                case 1:
+                    productName = "Apple";
+                    pricePerItem = 30;
+                    break;
+                case 2:
+                    productName = "Banana";
+                    pricePerItem = 10;
+                    break;
+                case 3:
+                    productName = "Mango";
+                    pricePerItem = 50;
+                    break;
+                default:
+                    alert("Invalid product code! Skipping this entry.");
+                    continue;
+            }
+
+            let totalPrice = pricePerItem * quantity;
+
+            
+            let message = totalPrice > 100 ? "High purchase" : "Normal purchase";
+
+            alert(`Item: ${productName}\nQuantity: ${quantity}\nTotal Price: ₹${totalPrice}\n${message}`);
+
+           
+            purchaseCount++;
+        }
+
+        alert("All 5 purchases completed!");
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Shop</title>
+</head>
+<body>
+    <script>
+        let rice ="Rice";
+        let sugar ="Sugar";
+        let wheat ="Wheat";
+
+        let riceprice =70;
+        let sugarprice =40;
+        let wheatprice =50;
+
+        let riceqty =2;
+        let sugarqty =3;
+        let wheatqty =4;
+
+        let ricecost =riceprice*riceqty;
+        let sugarcost=sugarprice*sugarqty;
+        let wheatcost=wheatprice*wheatqty;
+
+        console.log(rice + "cost= ₹ "+ricecost);
+        console.log(sugar + "cost= ₹"+sugarcost);
+        console.log(wheat +"cost =₹ "+wheatcost);
+
+        sugarqty=8;
+
+        sugarcost=sugarprice*sugarqty;
+        totalbill=ricecost+sugarcost+wheatcost;
+
+        console.log("updated"+sugar+"cost= ₹"+sugarcost);
+        console.log("Updated total bill: ₹" + totalbill);
+</script>
+</body>
+</html>
